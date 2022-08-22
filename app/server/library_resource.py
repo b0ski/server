@@ -5,7 +5,7 @@ from http.server import BaseHTTPRequestHandler
 from app.library.library import Library, Book
 
 
-class LibrarvResource:
+class LibraryResource:
     _Library: Library = None
 
     def __init__(self, Library: Library):
