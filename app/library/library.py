@@ -46,7 +46,7 @@ class Library:
     def write_off_book(self, book):
         self.books.remove(book)
 
-    def write_on_book(self, book):
+    def add_book(self, book):
         self.books.append(book)
 
     def write_off_reader(self, reader):

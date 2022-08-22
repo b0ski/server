@@ -2,17 +2,17 @@ import json
 from http import HTTPStatus
 from http.server import BaseHTTPRequestHandler
 
-from app.library.library import Library, Book
+from app.library import Library, Book
 
 
 class LibraryResource:
-    _Library: Library = None
+    _library: Library = None
 
-    def __init__(self, Library: Library):
-        self._library = Library
+    def __init__(self, library: Library):
+        self._library = library
 
     def add_book(self, req: BaseHTTPRequestHandler):
-        self._Library.add_book(Book("Harry Potter", "Fantasy", "J.K. Rowling"))
+        self._library.add_book(Book("Harry Potter", "Fantasy", "J.K. Rowling"))
 
         req.send_response(HTTPStatus.OK)
         req.send_header("Content-type", "application/json")
