@@ -15,6 +15,11 @@ class Reader:
 
 
 class Library:
+    address: str
+    telephone: str
+    books: list
+    readers: list
+
     reader = None
     book = None
     has_book = {}

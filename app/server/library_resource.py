@@ -2,7 +2,7 @@ import json
 from http import HTTPStatus
 from http.server import BaseHTTPRequestHandler
 
-from app.library import Library, Book
+from app.library.library import Library, Book
 
 
 class LibraryResource:
